@@ -1,4 +1,6 @@
-# Base layout template with Gulp, SCSS and Stylelint
-1. Create a repo using this template
-1. Replace `<your_account>` and `<repo_name>` with your Github username and the new repo name
-    - [DEMO LINK](https://<your_account>.github.io/<repo_name>/)
+- [DEMO LINK] https://ruslankhaiko.github.io/my-B-O-Landing/
+- [DESIGN LINK]https://www.figma.com/design/DtkQmQ797hk0nI4KfMi2Uq/BOSE-New-Version?node-id=6817-289&t=HDgNvR7KsXT5nWGm-0
+- B&O landing page is a page of the sound products store, where you can see and chose soundbars, headphones or speakers you might like.
+- To make this landing page i used BEM methode of writing the code to make easier to read and understend.
+- Also used SASS basics to make the styles for this page.
+- Positions for blocks and elements were used with a Grid Layout Module.

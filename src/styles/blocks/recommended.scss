@@ -1,0 +1,29 @@
+.recommended {
+  &__products {
+
+    @include pageGrid;
+    row-gap: 40px;
+  }
+
+  &__product {
+    grid-column: 1 / -1;
+
+    @include hover(transform, scale(1.05));
+
+    @include onTablet {
+      grid-column: 2 / -2;
+    }
+
+    @include onDesktop {
+      grid-column: span 4;
+    }
+
+  }
+
+  .product__price {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0px;
+  }
+}

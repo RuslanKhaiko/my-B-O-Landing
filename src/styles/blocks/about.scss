@@ -103,6 +103,9 @@
 }
 
 .primary__button:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+  cursor: pointer;
   color: #ffff;
   background-color: $main-text-color;
 }

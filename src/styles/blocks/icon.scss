@@ -16,31 +16,6 @@
     background-image: url(/src/icons/icon-phone-call-2x.png);
     background-repeat: no-repeat;
     position: relative;
-
-      &:hover::after {
-        content: '+1 234 5555-55-55';
-        position: absolute;
-        transform: translate(-87px, 38px);
-        color: $main-text-color;
-        font-family: inherit;
-        font-size: 12px;
-        font-weight: 700;
-        line-height: 16px;
-        letter-spacing: 2px;
-        text-align: right;
-        white-space: nowrap;
-        transition:
-          opacity 0.3s ease,
-          visibility 0.3s ease;
-        opacity: 1;
-        visibility: visible;
-
-        @include onDesktop {
-          margin-top: 10px;
-          transform: translateX(-150px);
-        }
-      }
-
   }
 
   &--menu {
@@ -59,3 +34,37 @@
   }
 
 
+
+  .hidden__element {
+    display: block;
+    padding-top: 10px;
+    padding-right: 30px;
+    align-items: center;
+    right: 200px;
+    height: 32px;
+    position: absolute;
+    visibility: hidden;
+
+  }
+
+  .hidden__element--style {
+      text-decoration: none;
+      color: $main-text-color;
+      font-family: inherit;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 16px;
+      letter-spacing: 2px;
+      text-align: right;
+      white-space: nowrap;
+  }
+
+  .hidden__element:hover {
+    visibility: visible;
+    z-index: 1;
+  }
+
+ .top-bar__icons a:nth-child(1):hover~.hidden__element {
+   visibility: visible;
+   z-index: 1;
+ }

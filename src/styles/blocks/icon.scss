@@ -15,8 +15,7 @@
   &--phone {
     background-image: url(/src/icons/icon-phone-call-2x.png);
     background-repeat: no-repeat;
-    position: relative;
-  }
+    }
 
   &--menu {
     background-image: url(/src/icons/icon-burger-menu-2x.png);
@@ -31,40 +30,39 @@
     background-image: url(/src/icons/icon-close-2x.png);
     background-repeat: no-repeat;
   }
+
+}
+
+  .hidden__element__position {
+    position: relative;
   }
 
-
-
   .hidden__element {
-    display: block;
-    padding-top: 10px;
-    padding-right: 30px;
     align-items: center;
-    right: 200px;
-    height: 32px;
+    right: 50px;
+    top:10px;
     position: absolute;
     visibility: hidden;
-
   }
 
   .hidden__element--style {
-      text-decoration: none;
-      color: $main-text-color;
-      font-family: inherit;
-      font-size: 12px;
-      font-weight: 700;
-      line-height: 16px;
-      letter-spacing: 2px;
-      text-align: right;
-      white-space: nowrap;
-  }
+    text-decoration: none;
+    color: $main-text-color;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 2px;
+    text-align: right;
+    white-space: nowrap;
+    }
 
   .hidden__element:hover {
     visibility: visible;
     z-index: 1;
   }
 
- .top-bar__icons a:nth-child(1):hover~.hidden__element {
-   visibility: visible;
-   z-index: 1;
- }
+  .top-bar__icons a:nth-child(1):hover~.hidden__element {
+    visibility: visible;
+    z-index: 1;
+  }

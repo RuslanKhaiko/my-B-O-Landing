@@ -4,8 +4,7 @@
   width: 24px;
   background-size: cover;
   background-position: center;
-
-  @include hover(transform,scale(1.2));
+  @include hover(transform, scale(1.2));
 
   @include onTablet {
     width: 32px;
@@ -15,7 +14,8 @@
   &--phone {
     background-image: url(/src/icons/icon-phone-call-2x.png);
     background-repeat: no-repeat;
-    }
+    position: relative;
+  }
 
   &--menu {
     background-image: url(/src/icons/icon-burger-menu-2x.png);
@@ -30,39 +30,43 @@
     background-image: url(/src/icons/icon-close-2x.png);
     background-repeat: no-repeat;
   }
-
 }
 
-  .hidden__element__position {
-    position: relative;
-  }
+.hidden__element__position {
+  position: relative;
+}
 
-  .hidden__element {
-    align-items: center;
-    right: 50px;
-    top:10px;
-    position: absolute;
-    visibility: hidden;
-  }
+.hidden__element {
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-right: 10px;
+  visibility: hidden;
+  z-index: 1;
+}
 
-  .hidden__element--style {
-    text-decoration: none;
-    color: $main-text-color;
-    font-family: inherit;
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 16px;
-    letter-spacing: 2px;
-    text-align: right;
-    white-space: nowrap;
-    }
+.hidden__element--style {
+  text-decoration: none;
+  color: $main-text-color;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 2px;
+  text-align: right;
+  white-space: nowrap;
+}
 
+@include onDesktop {
   .hidden__element:hover {
     visibility: visible;
     z-index: 1;
   }
 
-  .top-bar__icons a:nth-child(1):hover~.hidden__element {
+  .hidden__element__position:hover .hidden__element {
     visibility: visible;
     z-index: 1;
   }
+}
+
